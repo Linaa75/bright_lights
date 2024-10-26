@@ -1,0 +1,112 @@
+.hero {
+    min-height: 100dvh;
+    padding: 120px 0 280px;
+    background: linear-gradient(rgba(255,255,255, 0.1), $bg-color 91%), linear-gradient(rgba(255,255,255, 0.155), rgba(255,255,255, 0.155)), url(/src/img/webp/bg.webp) no-repeat center / cover;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__head {
+    }
+
+    &__head-subtitle {
+        font-size: 48px;
+        margin: 0 0 20px;
+    }
+
+    &__head-title {
+        margin: 0 0 65px;
+        font-size: 100px;
+        letter-spacing: 2.5px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $main-color;
+        color: transparent;
+    }
+
+    &__player {
+        display: flex;
+        gap: 45px;
+        align-items: center;
+    }
+
+    &__player-controls {
+    }
+
+    &__player-controls-btn {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+
+        &.pause {
+            span:first-child {
+                width: 20px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 0;
+                clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+            }
+            span:nth-child(2) {
+                transform: translateY(-50%) scale(0);
+            }
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            border-radius: 2px;
+            width: 6px;
+            height: 22px;
+            background: $main-color;
+            transition: .2s;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        span:nth-child(2) {
+            left: 60%;
+        }
+    }
+
+    &__player-song {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    &__player-slider {
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: $main-color;
+        overflow: hidden;
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 4px;
+            height: 20px;
+            background: $accent-color;
+            box-shadow: -800px 0 0 800px $accent-color;
+        }
+    }
+
+    &__player-time {
+        font-weight: 500;
+        display: flex;
+    }
+
+    &__player-time-current {
+    }
+
+    &__player-time-duration {
+    }
+}

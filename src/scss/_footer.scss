@@ -1,0 +1,82 @@
+.footer {
+    padding: 90px 0 40px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        padding: 0 0 60px;
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 0 0 60px;
+        color: $main-color;
+    }
+
+    &__contact-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        a {
+            color: $main-color;
+            transition: all .3s linear;
+
+            &:hover {
+                color: $accent-color;
+                transition: all .3s linear;
+            }
+        }
+    }
+
+    &__icons {
+        padding: 0 0 100px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__icon {
+        border-radius: 50%;
+        background: $accent-color;
+        padding: 10px;
+        transition: all .3s linear;
+
+        &:hover {
+            background: #2C2C2C;
+            transition: all .3s linear;
+        }
+
+        svg {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__author {
+        font-size: 13px;
+        color: $main-color;
+        opacity: 0.5;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}

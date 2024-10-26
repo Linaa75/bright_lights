@@ -1,0 +1,37 @@
+body {
+	font-family: 'Poppins';
+	font-weight: 700;
+	font-size: 18px;
+	color: $main-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	position: relative;
+	background: $bg-color;
+}
+
+.container {
+	padding: 0 30px;
+
+	@media screen and (min-width: $breakpoint-md) {
+		max-width: 708px;
+		margin: 0 auto;
+	}
+	
+	@media screen and (min-width: $breakpoint-lg) {
+		max-width: 964px;
+	}
+
+	@media screen and (min-width: $breakpoint-xl) {
+		max-width: 1270px;
+	}
+}
+
+.title {
+	font-size: 48px;
+	color: $main-color;
+}

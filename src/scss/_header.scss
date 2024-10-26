@@ -1,0 +1,44 @@
+.header {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__container {
+        display: flex;
+        gap: 65px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+    }
+
+    &__burger {
+    }
+
+    &__nav {
+
+        &-close {
+
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 56px;
+    }
+
+    &__menu-item a {
+        color: $main-color;
+        font-weight: 600;
+        transition: all .3S linear;
+
+        &:hover {
+            color: $accent-color;
+            transition: all .3S linear;
+        }
+    }
+}
+

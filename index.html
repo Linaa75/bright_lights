@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/src/img/icons/60x60.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bright Lights</title>
   </head>
   <body>
-		
+	<audio src="" id="audio"></audio>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__logo">
+					<a href="index.html">
+						<img src="/src/img/icons/logo.svg" alt="logo" height="60" width="223">
+					</a>
+				</div>
+				<div class="header__burger">
+					<span></span>
+				</div>
+				<nav class="header__nav">
+					<div class="header__nav-close"></div>
+					<ul class="header__menu">
+						<li class="header__menu-item"><a href="#">About</a></li>
+						<li class="header__menu-item"><a href="#">News</a></li>
+						<li class="header__menu-item"><a href="#">Music</a></li>
+						<li class="header__menu-item"><a href="#">Media</a></li>
+						<li class="header__menu-item"><a href="#">Tours</a></li>
+						<li class="header__menu-item"><a href="#">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+	<main class="main">
+		<section class="hero">
+			<div class="container hero__container">
+				<div class="hero__head">
+					<h2 class="hero__head-subtitle">New Single</h2>
+					<h1 class="hero__head-title">War For Love</h1>
+				</div>
+
+				<!-- PLAYER -->
+				<div class="hero__player">
+					<!-- controls -->
+					<div class="hero__player-controls">
+						<button class="hero__player-controls-btn pause">
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+					<!-- bar slider -->
+					<div class="hero__player-song">
+						<input class="hero__player-slider" type="range" value="0">
+					</div>
+					<!-- time -->
+					<div class="hero__player-time">
+						<span class="hero__player-time-current">00:00</span>-
+						<span class="hero__player-time-duration">00:00</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container footer__container">
+			<a class="footer__logo" href="index.html">
+				<img src="/src/img/icons/logo.svg" alt="logo" height="60" width="223">
+			</a>
+			<div class="footer__contact">
+				<div class="footer__contact-title">
+					<p>Artist Management:</p>
+					<p>EMAIL:</p>
+				</div>
+				<div class="footer__contact-info">
+					<p>Jake Henny</p>
+					<a href="mailto:jake@brightlightsofficial.com">jake@brightlightsofficial.com</a>
+				</div>
+			</div>
+			<div class="footer__icons">
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#apple"></use></svg>
+				</a>
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#spotify"></use></svg>
+				</a>
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#instagram"></use></svg>
+				</a>
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#youtube"></use></svg>
+				</a>
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#twitter"></use></svg>
+				</a>
+				<a class="footer__icon" href="#">
+					<svg><use href="/src/img/icons/sprites.svg#facebook"></use></svg>
+				</a>
+			</div>
+			<p class="footer__author">©  2020 DJ bright lights.</p>
+		</div>
+	</footer>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
