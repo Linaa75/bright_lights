@@ -1,0 +1,96 @@
+.bright {
+    padding: 0 0 150px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 100px;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+            gap: 125px;
+        }
+    }
+
+    &__box {
+        max-width: 540px;
+    }
+
+    &__box-title {
+        @include title-with-icon;
+    }
+
+    &__box-desc {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        text-align: justify;
+        margin: 0 0 60px;
+
+        p:nth-child(1) {
+            padding: 0 0 35px;
+        } 
+    }
+
+    &__list {
+       display: flex;
+       flex-wrap: wrap;
+       row-gap: 20px;
+       column-gap: 30px;
+       font-weight: 600;
+
+        @media screen and (min-width: $breakpoint-md) {
+            row-gap: 30px;
+            column-gap: 40px;
+        }
+    }
+
+    &__list-item {
+        padding: 0 0 0 50px;
+        position: relative;
+        flex: 1 1 40%;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            padding: 3px 0 3px 50px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $accent-color;
+            border-radius: 10px 0;
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    &__images {
+        padding: 0 55px 26px 0;
+        background: url('/src/img/webp/about-1.webp') no-repeat bottom right / 250px 300px;
+        align-self: center;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            background: url('/src/img/webp/about-1.webp') no-repeat bottom right / 350px 400px;
+            padding: 0 95px 66px 0;
+        }
+
+        img {
+            width: 250px;
+            height: 300px;
+            border-radius: 30px 0;
+            object-fit: cover;
+
+            @media screen and (min-width: $breakpoint-sm) {
+                width: 350px;
+                height: 400px;
+            }
+        }
+    }
+}

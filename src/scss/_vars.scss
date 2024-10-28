@@ -9,3 +9,15 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
 $breakpoint-xxl: 1920px;
+
+@mixin title-with-icon {
+	font-size: 30px;
+	color: $main-color;
+    padding: 0 0 0 94px;
+    margin: 0 0 60px;
+    background: url(/src/img/icons/bright-img.svg) no-repeat 0/64px 31px;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 48px;
+    }
+}

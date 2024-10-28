@@ -5,23 +5,60 @@
     left: 0;
     right: 0;
 
-    &__container {
+    &__inner {
         display: flex;
         gap: 65px;
         align-items: center;
         justify-content: center;
-    }
 
-    &__logo {
-    }
+        @media screen and (min-width: $breakpoint-sm) {
+            justify-content: space-between;
+            gap: 0;
+        }
 
-    &__burger {
-    }
-
-    &__nav {
-
-        &-close {
-
+        &-logo  {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        
+            img {
+                width: 223px;
+                height: 60px;
+            }      
+        }
+    
+        &-burger {
+            width: 18px;
+            height: 14px;
+            position: relative;
+            cursor: pointer;
+            margin: 6px 0 0;
+        
+            @media screen and (min-width: $breakpoint-lg) {
+              display: none;
+            }
+        
+            &::before,
+            &::after,
+            span {
+              content: "";
+              position: absolute;
+              width: 100%;
+              left: 0;
+              top: 0;
+              height: 2px;
+              background: $main-color;
+            }
+        
+            &::after {
+              top: auto;
+              bottom: 0;
+            }
+        
+            span {
+              top: 50%;
+              transform: translateY(-50%);
+            }    
         }
     }
 
@@ -31,14 +68,73 @@
     }
 
     &__menu-item a {
-        color: $main-color;
+        display: block;
+        width: 100%;
+        color: $bg-color;
         font-weight: 600;
-        transition: all .3S linear;
 
-        &:hover {
-            color: $accent-color;
-            transition: all .3S linear;
+        @media screen and (min-width: $breakpoint-lg) {
+            color: $main-color;
+            padding: 0;
+            background: transparent;
+            font-size: 16px;
+            border-radius: 0;
+            transition: all .3s linear;
+
+            &:hover {
+                color: $accent-color;
+                transition: all .3s linear;
+            }
         }
     }
 }
+
+.header__nav {
+    position: fixed;
+    z-index: 20;
+    bottom: -100%;
+    left: 8px;
+    right: 8px;
+    background: $bg-color;
+    padding: 12px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        display: block;
+        border-radius: 0;
+        position: static;
+        background: transparent;
+        padding: 0;
+    }
+
+    &-close {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 20px auto;
+        
+        &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $accent-color;
+        transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    
+        @media screen and (min-width: $breakpoint-lg) {
+            display: none;
+        }
+    }
+}
+
 

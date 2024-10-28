@@ -11,28 +11,27 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container header__container">
-				<div class="header__logo">
-					<a href="index.html">
+				<div class="header__inner">
+					<a class="header__inner-logo" href="index.html">
 						<img src="/src/img/icons/logo.svg" alt="logo" height="60" width="223">
 					</a>
+					<div class="header__inner-burger">
+						<span></span>
+					</div>
+					<nav class="header__nav">
+						<div class="header__nav-close"></div>
+						<ul class="header__menu">
+							<li class="header__menu-item"><a href="#">About</a></li>
+							<li class="header__menu-item"><a href="#">News</a></li>
+							<li class="header__menu-item"><a href="#">Music</a></li>
+							<li class="header__menu-item"><a href="#">Media</a></li>
+							<li class="header__menu-item"><a href="#">Tours</a></li>
+							<li class="header__menu-item"><a href="#">Contacts</a></li>
+						</ul>
+					</nav>
 				</div>
-				<div class="header__burger">
-					<span></span>
-				</div>
-				<nav class="header__nav">
-					<div class="header__nav-close"></div>
-					<ul class="header__menu">
-						<li class="header__menu-item"><a href="#">About</a></li>
-						<li class="header__menu-item"><a href="#">News</a></li>
-						<li class="header__menu-item"><a href="#">Music</a></li>
-						<li class="header__menu-item"><a href="#">Media</a></li>
-						<li class="header__menu-item"><a href="#">Tours</a></li>
-						<li class="header__menu-item"><a href="#">Contacts</a></li>
-					</ul>
-				</nav>
 			</div>
 		</header>
-	</div>
 
 	<main class="main">
 		<section class="hero">
@@ -60,6 +59,62 @@
 						<span class="hero__player-time-current">00:00</span>-
 						<span class="hero__player-time-duration">00:00</span>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cards">
+			<div class="container cards__container">
+				<div class="cards__card">
+					<a class="cards__card-img" href="#">
+						<img src="/src/img/webp/box-1.webp" alt="content image" width="350" height="300">
+					</a>
+					<div class="cards__card-desc">
+						<a href="#">Working on my upcoming full-lenth album that`s releasing later this year.</a>
+					</div>
+				</div>
+				<div class="cards__card">
+					<a class="cards__card-img" href="#">
+						<img src="/src/img/webp/box-2.webp" alt="content image" width="350" height="300">
+					</a>
+					<div class="cards__card-desc">
+						<a href="#">
+							<p>Halloween vibes.</p>
+							<p>Listen my new track!</p>
+						</a>
+					</div>
+				</div>
+				<div class="cards__card">
+					<a class="cards__card-img" href="#">
+						<img src="/src/img/webp/box-3.webp" alt="content image" width="350" height="300">
+					</a>
+					<div class="cards__card-desc">
+						<a href="#">
+							<p>WarForLove is OUT NOW!!</p>
+							<p>Stream it here!</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bright">
+			<div class="container bright__container">
+				<div class="bright__box">
+					<h2 class="bright__box-title">Bright Lights</h2>
+					<div class="bright__box-desc">
+						<p>Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She has written for numerous</p>
+						<p>pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those streams can be attributed to her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million streams in the first week, releasing independently. Bright Lights is currently in the studio working on a self-produced album slated for release in 2020. </p>
+					</div>
+					<ul class="bright__list">
+						<li class="bright__list-item">Based in: Los Angeles</li>
+						<li class="bright__list-item">Genre: #DancePop</li>
+						<li class="bright__list-item">Founded in 2011</li>
+						<li class="bright__list-item">Label: 333 Recordings</li>
+					</ul>
+				</div>
+				<div class="bright__images">
+					<img src="/src/img/webp/about.webp" alt="content image">
 				</div>
 			</div>
 		</section>
@@ -103,6 +158,7 @@
 			<p class="footer__author">©  2020 DJ bright lights.</p>
 		</div>
 	</footer>
+	</div>
 
     <script type="module" src="./src/js/main.js"></script>
   </body>
