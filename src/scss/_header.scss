@@ -1,5 +1,5 @@
 .header {
-    padding: 30px 0;
+    padding: 40px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -7,13 +7,13 @@
 
     &__inner {
         display: flex;
-        gap: 65px;
+        justify-content: space-between;
+        gap: 0;
         align-items: center;
-        justify-content: center;
-
-        @media screen and (min-width: $breakpoint-sm) {
-            justify-content: space-between;
-            gap: 0;
+       
+        @media screen and (min-width: $breakpoint-md) {
+            gap: 65px;
+            justify-content: center;
         }
 
         &-logo  {
@@ -34,7 +34,7 @@
             cursor: pointer;
             margin: 6px 0 0;
         
-            @media screen and (min-width: $breakpoint-lg) {
+            @media screen and (min-width: $breakpoint-md) {
               display: none;
             }
         
@@ -64,7 +64,18 @@
 
     &__menu {
         display: flex;
-        gap: 56px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            gap: 28px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            gap: 56px;
+        }
     }
 
     &__menu-item a {
@@ -72,19 +83,21 @@
         width: 100%;
         color: $bg-color;
         font-weight: 600;
+        transition: all .3s linear;
 
-        @media screen and (min-width: $breakpoint-lg) {
+            &:hover {
+                background: $accent-color;
+                padding: 10px 50px;
+                border-radius: 10px 0;
+                transition: all .3s linear;
+            }
+
+        @media screen and (min-width: $breakpoint-md) {
             color: $main-color;
             padding: 0;
             background: transparent;
             font-size: 16px;
             border-radius: 0;
-            transition: all .3s linear;
-
-            &:hover {
-                color: $accent-color;
-                transition: all .3s linear;
-            }
         }
     }
 }
@@ -93,20 +106,24 @@
     position: fixed;
     z-index: 20;
     bottom: -100%;
-    left: 8px;
-    right: 8px;
-    background: $bg-color;
+    left: 5px;
+    right: 5px;
+    background: $main-color;
     padding: 12px;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-radius: 50px 0;
     transition: all 0.3s ease-in-out;
+    
+    &.active {
+        bottom: 0;
+      }
 
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: $breakpoint-md) {
         display: block;
         border-radius: 0;
         position: static;
         background: transparent;
         padding: 0;
+        bottom: -100%;
     }
 
     &-close {
@@ -131,7 +148,7 @@
             transform: rotate(-45deg);
         }
     
-        @media screen and (min-width: $breakpoint-lg) {
+        @media screen and (min-width: $breakpoint-md) {
             display: none;
         }
     }

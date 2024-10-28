@@ -1,9 +1,8 @@
 .hero {
     min-height: 100dvh;
-    padding: 120px 0 280px;
+    padding: 180px 0 280px;
     background: linear-gradient(rgba(255,255,255, 0.1), $bg-color 91%),
     linear-gradient(rgba(255,255,255, 0.155), rgba(255,255,255, 0.155)), url(/src/img/webp/bg.webp) no-repeat center / cover;
-
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
