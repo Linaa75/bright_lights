@@ -6,37 +6,56 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 60px;
     }
 
     &__logo {
-        padding: 0 0 60px;
     }
 
     &__contact {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
-        padding: 0 0 60px;
-        color: $main-color;
+        gap: 15px;
+        font-size: 16px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            gap: 30px;
+            font-size: 18px;
+        }
+
+        span {
+            margin: 0 10px;
+            @media screen and (min-width: $breakpoint-sm) {
+                display: none;
+            }
+        }
     }
 
     &__contact-title {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 10px;
         font-weight: 600;
         text-transform: uppercase;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            align-items: flex-end;
+        }
     }
 
     &__contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        display: none;
         gap: 10px;
         font-weight: 400;
         text-transform: uppercase;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         a {
             color: $main-color;
@@ -50,28 +69,55 @@
     }
 
     &__icons {
-        padding: 0 0 100px;
+        padding: 0 0 30px;
         display: flex;
-        gap: 30px;
-    }
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        gap: 20px 0;
 
-    &__icon {
-        border-radius: 50%;
-        background: $accent-color;
-        padding: 10px;
-        transition: all .3s linear;
-
-        &:hover {
-            background: #2C2C2C;
-            transition: all .3s linear;
+        @media screen and (min-width: $breakpoint-sm) {
+            gap: 30px;
+            padding: 0 0 60px;
+            flex-wrap: nowrap;
         }
 
-        svg {
-            height: 24px;
-            width: 24px;
+        &-icon {
+            padding: 0px;
+            flex: 1 1 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: $accent-color;
+                height: 40px;
+                width: 40px;
+                transition: .3s;
+        
+                &:hover {
+                    box-shadow: 0 0 0 8px #4f4c4c;
+                    transition: .3s;
+                }
+
+                @media screen and (min-width: $breakpoint-sm) {
+                    height: 44px;
+                    width: 44px;
+                    box-shadow: 0 0 0 8px #2C2C2C;
+                    padding: 8px;
+                }
+
+                svg {
+                    height: 24px;
+                    width: 24px;
+                }
+            }
         }
     }
-
+    
     &__author {
         font-size: 13px;
         color: $main-color;

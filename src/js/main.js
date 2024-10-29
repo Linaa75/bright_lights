@@ -22,7 +22,7 @@ playBtn.addEventListener("click", () => {
 });
 
 const playMusic = () => {
-    music.src = "/src/audio/IChooseMe-Amanati-Roniit.m4a";
+    music.src = "/IChooseMe-Amanati-Roniit.m4a";
 
     currentTime.innerHTML = "00:00";
 
@@ -75,3 +75,6 @@ playMusic();
 		navigation.classList.remove('active')
 	})
 })();
+
+
+// slider
