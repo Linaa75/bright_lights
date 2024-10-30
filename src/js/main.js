@@ -1,3 +1,4 @@
+import { Pagination } from 'swiper/modules';
 import '../scss/style.scss'
 //import switchThemeColor from './localstaradge.js'
 //switchThemeColor()
@@ -76,5 +77,20 @@ playMusic();
 	})
 })();
 
+var swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 40,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
 
-// slider
+    pagination: {
+      el: ".swiper-pagination",
+    },
+});
